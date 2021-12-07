@@ -1,0 +1,12 @@
+Didn't bother to write a file, solution done with a python REPL:
+
+part 1: use the median
+
+data.sort()
+median = data[len(data) / 2]
+sum([abs(x - median) for x in data])
+
+part 2: use the mean & check which value is the lowest
+
+mean = sum(data) / len(data)
+sum([ abs(x - mean) * (abs(x - mean) + 1) / 2 for x in data])
